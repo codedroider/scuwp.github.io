@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>scuwp.</title>
+</head>
+<body>
+    <div id="view"></div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const rawData = urlParams.get('data');
+        if (rawData) {
+            document.getElementById('view').innerHTML = rawData;
+        } else {
+            document.getElementById('view').innerHTML = "<h1>scuwp.</h1><p>usage: ?data=HTML_CODE</p>";
+        }
+    </script>
+</body>
+</html>
